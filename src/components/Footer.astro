@@ -8,21 +8,21 @@ const today = new Date();
 <footer class="transition-colors duration-300 fill-zinc-700 hover:fill-zinc-500 text-zinc-600 hover:text-zinc-400 sticky top-[100vh] border-t border-zinc-800 hover:border-zinc-600 py-4">
 	<Container>
 		<nav class="mx-auto max-w-7xl" aria-label="Top">
-			<div class="flex w-full items-center justify-between py-6">
+			<div class="flex flex-col-reverse sm:flex-row w-full items-left sm:items-center justify-between py-6">
 			  <!-- Left side -->
-			  <div class="copyright flex items-center">
+			  <div class="copyright pb-2 sm:pb-0 flex items-center">
 				&copy; {today.getFullYear()}
 			  </div>
 			  
 			  <!-- Center -->
-			<div class="deep-links ml-10">
-				<a class="px-4 inline-block text-inherit hover:text-zinc-200" href="#">Colophon</a>
-				<a class="px-4 inline-block text-inherit hover:text-zinc-200" href="#">Accessibility</a>
-				<a class="px-4 inline-block text-inherit hover:text-zinc-200" href="#">Privacy</a>
+			<div class="deep-links pb-4 sm:pb-0 sm:ml-10">
+				<a class="pr-4 sm:px-4 inline-block text-inherit hover:text-zinc-200" href="#">Colophon</a>
+				<a class="pr-4 sm:px-4 inline-block text-inherit hover:text-zinc-200" href="#">Accessibility</a>
+				<a class="pr-4 sm:px-4 inline-block text-inherit hover:text-zinc-200" href="#">Privacy</a>
 			</div>
 
 			  <!-- Right side -->
-			  <div class="social ml-10">
+			  <div class="social pb-2 sm:pb-0 sm:ml-10">
 				  <FooterIcons />
 			  </div>
 			</div>
