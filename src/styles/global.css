@@ -1,0 +1,11 @@
+h1, h2, h3, h4, h5, h6, p, li {
+    @apply text-stone-200;
+}
+
+p {
+    @apply leading-7 mb-6;
+}
+
+a {
+    @apply text-red-400;
+}
