@@ -6,7 +6,13 @@ module.exports = {
 			'sans': ['Söhne', 'system-ui'],
 			'mono': ['Monaco']
 		},
-		extend: {},
+		extend: {
+			colors: {
+			  red: {
+				550: '#EE3F3F'
+			  }
+			}
+		}
 	},
 	plugins: [],
 }

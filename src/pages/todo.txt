@@ -1,0 +1,12 @@
+-design the rest of the homepage
+    sections:
+    -most recent posts
+    -mastodon/fediverse feed
+    -elsewhere (social links)
+    -high-level resume
+-design blog list page
+-design blog post page
+-transfer blog posts
+-add api connectivity to music widget
+-design now page
+-design projects page
