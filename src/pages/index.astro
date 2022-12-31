@@ -23,25 +23,25 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 					<p class="mb-0">
 						<a rel="noreferrer noopener" href={SOCIAL_LINKS.mastodon.link} target="_blank">{SOCIAL_LINKS.mastodon.title}</a>
 					</p>
-					<p class="text-zinc-400">{SOCIAL_LINKS.mastodon.handle}</p>
+					<p class="text-zinc-400 mb-6">{SOCIAL_LINKS.mastodon.handle}</p>
 				</li>
 				<li class="col-span-1 sm:col-span-2">
 					<p class="mb-0">
 						<a rel="noreferrer noopener" href={SOCIAL_LINKS.github.link} target="_blank">{SOCIAL_LINKS.github.title}</a>
 					</p>
-					<p class="text-zinc-400">{SOCIAL_LINKS.github.handle}</p>
+					<p class="text-zinc-400 mb-6">{SOCIAL_LINKS.github.handle}</p>
 				</li>
 				<li class="col-span-1 sm:col-span-2">
 					<p class="mb-0">
 						<a rel="noreferrer noopener" href={SOCIAL_LINKS.twitter.link} target="_blank">{SOCIAL_LINKS.twitter.title}</a>
 					</p>
-					<p class="text-zinc-400">{SOCIAL_LINKS.twitter.handle}</p>
+					<p class="text-zinc-400 mb-6">{SOCIAL_LINKS.twitter.handle}</p>
 				</li>
 				<li class="col-span-1 sm:col-span-2">
 					<p class="mb-0">
 						<a rel="noreferrer noopener" href={SOCIAL_LINKS.linkedin.link} target="_blank">{SOCIAL_LINKS.linkedin.title}</a>
 					</p>
-					<p class="text-zinc-400">{SOCIAL_LINKS.linkedin.handle}</p>
+					<p class="text-zinc-400 mb-6">{SOCIAL_LINKS.linkedin.handle}</p>
 				</li>
 			</ul>
 		</div>
@@ -66,3 +66,7 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 		</div>
 	</div>
 </Shell>
+
+<style>
+
+</style>
