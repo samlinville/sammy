@@ -4,15 +4,39 @@ module.exports = {
 	theme: {
 		fontFamily: {
 			'sans': ['Söhne', 'system-ui'],
-			'mono': ['Monaco']
+			'mono': ['MonoLisa']
 		},
 		extend: {
 			colors: {
 			  red: {
 				550: '#EE3F3F'
 			  }
-			}
+			},
+			typography: ({ theme }) => ({
+				zinc: {
+					css: {
+						'--tw-prose-invert-body': theme('colors.zinc[400]'),
+						'--tw-prose-invert-headings': theme('colors.zinc[200]'),
+						'--tw-prose-invert-lead': theme('colors.zinc[300]'),
+						'--tw-prose-invert-links': theme('colors.zinc[200]'),
+						'--tw-prose-invert-bold': theme('colors.zinc[200]'),
+						'--tw-prose-invert-counters': theme('colors.zinc[400]'),
+						'--tw-prose-invert-bullets': theme('colors.zinc[600]'),
+						'--tw-prose-invert-hr': theme('colors.zinc[700]'),
+						'--tw-prose-invert-quotes': theme('colors.zinc[200]'),
+						'--tw-prose-invert-quote-borders': theme('colors.zinc[700]'),
+						'--tw-prose-invert-captions': theme('colors.zinc[400]'),
+						'--tw-prose-invert-code': theme('colors.zinc[200]'),
+						'--tw-prose-invert-pre-code': theme('colors.zinc[300]'),
+						'--tw-prose-invert-pre-bg': theme('colors.zinc.800'),
+						'--tw-prose-invert-th-borders': theme('colors.zinc[600]'),
+						'--tw-prose-invert-td-borders': theme('colors.zinc[700]'),
+					}
+				}
+			})
 		}
 	},
-	plugins: [],
+	plugins: [
+		require('@tailwindcss/typography'),
+	]
 }

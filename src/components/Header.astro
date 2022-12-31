@@ -9,7 +9,7 @@ import { SITE_TITLE, SITE_SUBTITLE } from '../config';
 	<nav class="mx-auto max-w-7xl" aria-label="Top">
 	  	<div class="flex w-full items-center justify-between py-6">
 			<div class="flex items-center">
-			<a href="#">
+			<a class="no-underline" href="/">
 				<h2>
 					{SITE_TITLE}<br/>
 					<span class="text-zinc-400">{SITE_SUBTITLE}</span>
@@ -17,17 +17,13 @@ import { SITE_TITLE, SITE_SUBTITLE } from '../config';
 			</a>
 			</div>
 
+			<MusicPill client:load />
+
 			<div class="navpill transition-colors duration-300 px-1 py-1 border rounded-full border-zinc-800 bg-zinc-900">
 				<HeaderLink href="/now">Now</HeaderLink>
-				<HeaderLink href="/">Blog</HeaderLink>
-				<HeaderLink href="/about">Projects</HeaderLink>
+				<HeaderLink href="/blog">Blog</HeaderLink>
+				<!-- <HeaderLink href="/about">Projects</HeaderLink> -->
 				<!-- <HeaderLink href="#">Contact</HeaderLink> -->
-			</div>
-			<div class="hidden sm:flex items-center justify-center musicpill transition-colors duration-300 border rounded-full border-zinc-800 hover:border-zinc-600 pl-1 py-1 pr-6 bg-zinc-900">
-				<img alt="An 8-bit pixel art image of a compact disc rotating" class=" h-[35px] rotate opacity-75 transition-opacity duration-300" src={new URL('/disc.png', Astro.url)}>
-				<div class="ml-4">
-					<MusicPill client:load/>       
-				</div>
 			</div>
 			
 	  	</div>
@@ -44,30 +40,5 @@ import { SITE_TITLE, SITE_SUBTITLE } from '../config';
 <style>
 .navpill:hover {
 	@apply border-zinc-600;
-}
-
-.musicpill:hover img {
-	@apply opacity-100;
-}
-
-.musicpill:hover .musictitle {
-	@apply text-zinc-200;
-}
-
-.musicpill:hover .musicartist {
-	@apply text-zinc-400;
-}
-
-.rotate {
-	animation: rotation 1s infinite linear;
-}
-
-@keyframes rotation {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
 }
 </style>

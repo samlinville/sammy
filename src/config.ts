@@ -28,9 +28,9 @@ export const SOCIAL_LINKS = {
         handle: '@samlinville',
     },
     mastodon: {
-        title: 'Mastodon',
+        title: 'Hachyderm.io',
         link: 'https://hachyderm.io/@thrillifying',
-        handle: '@thrillifying@hachyderm.io',
+        handle: '@thrillifying',
     },
     github: {
         title: 'GitHub',

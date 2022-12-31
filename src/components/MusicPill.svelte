@@ -1,5 +1,7 @@
 <script>
-	let promise = getCurrentSong();
+	import Disc from "../assets/images/disc.png"
+
+    let promise = getCurrentSong();
 
 	async function getCurrentSong() {
 		const res = await fetch(`https://sammy-service.fly.dev/spotify/current`);
@@ -13,12 +15,53 @@
 	}
 </script>
 
-{#await promise}
-    <p class="musictitle text-xs text-zinc-200 transition-colors duration-300 leading-0 mb-0">Loading...</p>
-{:then song}
-    <p class="musictitle text-xs text-zinc-200 transition-colors duration-300 leading-0 mb-0">{song.title}</p>
-    <p class="musicartist text-xs text-zinc-400 transition-colors duration-300 leading-0 mb-0">{song.artist}</p>
-{:catch error}
-    <p class="musictitle text-xs text-zinc-200 transition-colors duration-300 leading-0 mb-0">Nothing playing</p>
-{/await}        
+
+<div class="hidden sm:flex items-center justify-center musicpill transition-colors duration-300 border rounded-full border-zinc-800 hover:border-zinc-600 pl-1 py-1 pr-6 bg-zinc-900">
+    {#await promise}
+        <img alt="An 8-bit pixel art of a compact disc rotating" class="h-[35px] opacity-75 transition-opacity duration-300" src={Disc}>
+        <div class="ml-4">
+            <p class="musictitle text-xs text-zinc-200 transition-colors duration-300 leading-0 mb-0">Loading...</p>
+        </div>
+    {:then song}
+        <img alt="An 8-bit pixel art of a compact disc rotating" class="rotate h-[35px] opacity-75 transition-opacity duration-300" src={Disc}>
+        <div class="ml-4">
+            <p class="musictitle text-xs text-zinc-200 transition-colors duration-300 leading-0 mb-0">{song.title}</p>
+            <p class="musicartist text-xs text-zinc-400 transition-colors duration-300 leading-0 mb-0">{song.artist}</p>
+        </div>
+    {:catch error}
+        <img alt="An 8-bit pixel art of a compact disc rotating" class="h-[35px] opacity-75 transition-opacity duration-300" src={Disc}>
+        <div class="ml-4">
+            <p class="musictitle text-xs text-zinc-200 transition-colors duration-300 leading-0 mb-0">Nothing playing</p>
+        </div>
+    {/await}        
+    
+</div>
+
+<style>
+    .musicpill:hover img {
+        @apply opacity-100;
+    }
+
+    .musicpill:hover .musictitle {
+        @apply text-zinc-200;
+    }
+
+    .musicpill:hover .musicartist {
+        @apply text-zinc-400;
+    }
+
+    .rotate {
+        animation: rotation 1s infinite linear;
+    }
+
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(359deg);
+        }
+    }
+</style>
+      
 

@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
-// import torchlight from 'remark-torchlight';
+import torchlight from 'remark-torchlight';
 
 // https://astro.build/config
 import tailwind from "@astrojs/tailwind";
@@ -17,6 +17,6 @@ export default defineConfig({
   integrations: [mdx(), sitemap(), tailwind(), svelte()],
   markdown: {
     extendDefaultPlugins: true
-    // remarkPlugins: [torchlight]
+    // remarkPlugins: [plugin]
   },
 });

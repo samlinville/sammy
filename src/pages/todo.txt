@@ -1,12 +1,13 @@
--design the rest of the homepage
-    sections:
-    -most recent posts
-    -mastodon/fediverse feed
-    -elsewhere (social links)
-    -high-level resume
--design blog list page
--design blog post page
--transfer blog posts
--add api connectivity to music widget
--design now page
--design projects page
+- refine homepage spacing + type
+- design blog list page
+- design blog post page
+- transfer blog posts
+- design now page
+- add rss for blog
+- add some basic auth to sammy-service api
+- design "feed" aggregation of my activity
+    - Sources: Mastodon toots + likes, Blog posts, Tweets + likes
+- music widget
+    - refresh logic
+    - explore text truncation / fixed width
+    - 

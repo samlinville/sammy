@@ -4,12 +4,38 @@ h1, h2, h3, h4, h5, h6, p, li {
 
 p {
     @apply leading-7 mb-6;
+    font-variant-numeric: slashed-zero;
 }
 
 a {
-    @apply text-red-550;
+    @apply underline underline-offset-4 decoration-zinc-500;
+    @apply transition-colors duration-300;
 }
 
 a:hover {
     /* text-decoration: underline; */
+    @apply decoration-zinc-200;
 }
+
+code {
+    /* @apply bg-zinc-900 mx-1 px-1 py-1 rounded-md;  */
+    @apply text-[15px];
+    font-variant-numeric: slashed-zero;
+}
+
+body {
+    font-feature-settings: "ss02", "ss04", "ss05", "ss06", "ss07", "ss08", "ss09", "ss11", "ss12" !important;
+}
+
+article, .content-prose { @apply prose prose-zinc dark:prose-invert; }
+
+pre {
+    @apply border border-zinc-700;
+}
+
+/* article h1 { @apply text-5xl; }
+article h2 { @apply text-3xl; }
+article h3 { @apply text-2xl; }
+article h4 { @apply text-xl; }
+article h5 { @apply text-lg; }
+article h6 { @apply text-base; } */

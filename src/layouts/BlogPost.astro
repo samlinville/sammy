@@ -1,7 +1,5 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
+import Shell from '../components/Shell.astro';
 
 export interface Props {
 	content: {
@@ -18,27 +16,11 @@ const {
 } = Astro.props;
 ---
 
-<html lang="en">
-	<head>
-		<BaseHead title={title} description={description} />
-		<style>
-			.title {
-				font-size: 2em;
-				margin: 0.25em 0 0;
-			}
-			hr {
-				border-top: 1px solid #ddd;
-				margin: 1rem 0;
-			}
-		</style>
-	</head>
-
-	<body>
-		<Header />
-		<main>
+<Shell>
 			<article>
-				{heroImage && <img width={720} height={360} src={heroImage} alt="" />}
-				<h1 class="title">{title}</h1>
+				<!-- {heroImage && <img width={720} height={360} src={heroImage} alt="" />} -->
+				<h1 class="mb-0">{title}</h1>
+				<p class="text-lg mb-0">{description}</p>
 				{pubDate && <time>{pubDate}</time>}
 				{
 					updatedDate && (
@@ -47,10 +29,7 @@ const {
 						</div>
 					)
 				}
-				<hr />
+				<hr class="mt-4" />
 				<slot />
 			</article>
-		</main>
-		<Footer />
-	</body>
-</html>
+</Shell>
