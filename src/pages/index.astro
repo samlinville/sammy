@@ -21,25 +21,25 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 			<ul class="grid grid-cols-2 gap-x-4">
 				<li class="col-span-1 sm:col-span-2">
 					<p class="mb-0">
-						<a href={SOCIAL_LINKS.mastodon.link} class="underline">{SOCIAL_LINKS.mastodon.title}</a>
+						<a href={SOCIAL_LINKS.mastodon.link} class="underline decoration-zinc-500 hover:decoration-zinc-200">{SOCIAL_LINKS.mastodon.title}</a>
 					</p>
 					<p class="text-zinc-400 mb-6">{SOCIAL_LINKS.mastodon.handle}</p>
 				</li>
 				<li class="col-span-1 sm:col-span-2">
 					<p class="mb-0">
-						<a href={SOCIAL_LINKS.github.link} class="underline">{SOCIAL_LINKS.github.title}</a>
+						<a href={SOCIAL_LINKS.github.link} class="underline decoration-zinc-500 hover:decoration-zinc-200">{SOCIAL_LINKS.github.title}</a>
 					</p>
 					<p class="text-zinc-400 mb-6">{SOCIAL_LINKS.github.handle}</p>
 				</li>
 				<li class="col-span-1 sm:col-span-2">
 					<p class="mb-0">
-						<a href={SOCIAL_LINKS.twitter.link} class="underline">{SOCIAL_LINKS.twitter.title}</a>
+						<a href={SOCIAL_LINKS.twitter.link} class="underline decoration-zinc-500 hover:decoration-zinc-200">{SOCIAL_LINKS.twitter.title}</a>
 					</p>
 					<p class="text-zinc-400 mb-6">{SOCIAL_LINKS.twitter.handle}</p>
 				</li>
 				<li class="col-span-1 sm:col-span-2">
 					<p class="mb-0">
-						<a href={SOCIAL_LINKS.linkedin.link} class="underline">{SOCIAL_LINKS.linkedin.title}</a>
+						<a href={SOCIAL_LINKS.linkedin.link} class="underline decoration-zinc-500 hover:decoration-zinc-200">{SOCIAL_LINKS.linkedin.title}</a>
 					</p>
 					<p class="text-zinc-400 mb-6">{SOCIAL_LINKS.linkedin.handle}</p>
 				</li>
@@ -52,14 +52,14 @@ const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
 				{posts.slice(0, 3).map((post) => (
 					<li>
 						<p class="mb-0">
-							<a class="underline" href={post.url}>{post.frontmatter.title}</a>
+							<a class="underline decoration-zinc-500 hover:decoration-zinc-200" href={post.url}>{post.frontmatter.title}</a>
 						</p>
 						<p class="text-zinc-400 mb-6">{post.frontmatter.description}</p>
 					</li>
 					))}
 				<li>
 					<p class="mb-0">
-						<a href="/blog">All blogs</a>
+						<a href="/blog" class="underline decoration-zinc-500 hover:decoration-zinc-200">All blogs</a>
 					</p>
 				</li>
 			</ul>
