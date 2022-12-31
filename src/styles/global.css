@@ -2,6 +2,10 @@
     @apply decoration-zinc-500 underline-offset-4;
 }
 
+.prose p, .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6, .prose a, .prose li {
+    @apply text-zinc-200;
+}
+
 h1, h2, h3, h4, h5, h6, p, li {
     @apply text-stone-200;
 }
