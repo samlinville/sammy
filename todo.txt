@@ -1,8 +1,6 @@
-- refine homepage spacing + type
-- design blog list page
-- design blog post page
-- transfer blog posts
-- design now page
+- fix css problem
+- add sohne webfont
+- change favicon
 - add rss for blog
 - add some basic auth to sammy-service api
 - design "feed" aggregation of my activity

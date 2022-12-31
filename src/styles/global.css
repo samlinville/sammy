@@ -1,3 +1,7 @@
+.prose a {
+    @apply decoration-zinc-500 underline-offset-4;
+}
+
 h1, h2, h3, h4, h5, h6, p, li {
     @apply text-stone-200;
 }
@@ -28,6 +32,8 @@ body {
 }
 
 article, .content-prose { @apply prose prose-zinc dark:prose-invert; }
+
+
 
 pre {
     @apply border border-zinc-700;
