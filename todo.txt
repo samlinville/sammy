@@ -1,4 +1,3 @@
-- fix css problem
 - add sohne webfont
 - change favicon
 - add rss for blog
