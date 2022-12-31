@@ -3,8 +3,9 @@ module.exports = {
 	content: ['./src/**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
 	theme: {
 		fontFamily: {
-			'sans': ['Söhne', 'system-ui'],
-			'mono': ['MonoLisa']
+			'sans': ["system", "-apple-system", "BlinkMacSystemFont",
+				"Helvetica Neue", "Lucida Grande"],
+			'mono': ['SF Mono', 'SFMono-Regular', 'ui-monospace', 'DejaVu Sans Mono', 'Menlo', 'Consolas', 'monospace']
 		},
 		extend: {
 			colors: {
