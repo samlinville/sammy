@@ -6,6 +6,11 @@
     @apply text-zinc-200;
 }
 
+.prose code {
+    font-feature-settings: "liga" on, "calt" on;
+    font-variant-ligatures: contextual;
+}
+
 h1, h2, h3, h4, h5, h6, p, li {
     @apply text-stone-200;
 }
