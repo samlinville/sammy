@@ -1,4 +1,5 @@
 - optimize mobile layout on blog index
+- make title tag match page title
 - implement tags on blog posts
 - investigate vercel edge functions for spotify backend
 - design "feed" aggregation of my activity
