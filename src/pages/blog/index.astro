@@ -7,9 +7,12 @@ const posts = (await Astro.glob("./*.{md,mdx}")).sort(
     new Date(b.frontmatter.pubDate).valueOf() -
     new Date(a.frontmatter.pubDate).valueOf()
 );
+
+const title = "Blog";
+const description = "Sam's blog";
 ---
 
-<Shell>
+<Shell title={title} description={description}>
   <section>
     <ul>
       {

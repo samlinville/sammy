@@ -1,23 +1,29 @@
 ---
-import Container from '../components/Container.astro';
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION, SOCIAL_LINKS } from '../config';
+import Container from "../components/Container.astro";
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION, SOCIAL_LINKS } from "../config";
+
+const { title, description } = Astro.props;
 ---
+
 <!DOCTYPE html>
 <html lang="en" class="min-h-screen">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body class="min-h-screen bg-zinc-900">
-		<!-- <div class="fixed top-0 left-0 right-0 z-50 h-24 bg-gradient-to-b from-zinc-900"></div> -->
-		<Header title={SITE_TITLE} />
-		<Container>
-		<main class="mt-20">
-            <slot />
-        </main>
+  <head>
+    <BaseHead
+      title={title == SITE_TITLE ? SITE_TITLE : title + " | " + SITE_TITLE}
+      description={description}
+    />
+  </head>
+  <body class="min-h-screen bg-zinc-900">
+    <!-- <div class="fixed top-0 left-0 right-0 z-50 h-24 bg-gradient-to-b from-zinc-900"></div> -->
+    <Header title={SITE_TITLE} />
+    <Container>
+      <main class="mt-20">
+        <slot />
+      </main>
     </Container>
     <Footer />
-</body>
+  </body>
 </html>

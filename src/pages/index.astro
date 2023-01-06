@@ -1,43 +1,57 @@
 ---
-import Shell from '../components/Shell.astro';
-import SocialColumn from '../components/SocialColumn.astro';
+import Shell from "../components/Shell.astro";
+import SocialColumn from "../components/SocialColumn.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
 
 // Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob('./blog/*.{md,mdx}')).sort(
-	(a, b) => new Date(b.frontmatter.pubDate).valueOf() - new Date(a.frontmatter.pubDate).valueOf()
+const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
+  (a, b) =>
+    new Date(b.frontmatter.pubDate).valueOf() -
+    new Date(a.frontmatter.pubDate).valueOf()
 );
+
+const title = SITE_TITLE;
+const description = SITE_DESCRIPTION;
 ---
 
-<Shell>
-	<p>
-		<span class="font-mono">Design + code.</span> On a journey to build good things. Interested in cloud infrastructure, security, and developer experience. Product Manager for <a rel="noreferrer noopener" href="https://vaultproject.io" target="_blank">HashiCorp Vault</a>. 
-	</p>
+<Shell title={title} description={description}>
+  <p>
+    <span class="font-mono">Design + code.</span> On a journey to build good things.
+    Interested in cloud infrastructure, security, and developer experience. Product
+    Manager for <a
+      rel="noreferrer noopener"
+      href="https://vaultproject.io"
+      target="_blank">HashiCorp Vault</a
+    >.
+  </p>
 
-	<div class="mt-16 grid grid-cols-4 gap-16">
-		<div class="col-span-4 sm:col-span-1 order-last sm:order-first">
-			<SocialColumn />
-		</div>
+  <div class="mt-16 grid grid-cols-4 gap-16">
+    <div class="col-span-4 sm:col-span-1 order-last sm:order-first">
+      <SocialColumn />
+    </div>
 
-		<div class="col-span-4 sm:col-span-3">
-			<h2 class="text-sm text-zinc-400 mb-4">Recent blogs</h2>
-			<ul>
-				{posts.slice(0, 3).map((post) => (
-					<li>
-						<p class="mb-0">
-							<a href={post.url}>{post.frontmatter.title}</a>
-						</p>
-						<p class="text-zinc-400">{post.frontmatter.description}</p>
-					</li>
-				))}
-				<li>
-					<p class="mb-0">
-						<a href="/blog">All blogs</a>
-					</p>
-					<p>
-						<a href="/rss.xml">RSS feed</a>
-					</p>
-				</li>
-			</ul>
-		</div>
-	</div>
+    <div class="col-span-4 sm:col-span-3">
+      <h2 class="text-sm text-zinc-400 mb-4">Recent blogs</h2>
+      <ul>
+        {
+          posts.slice(0, 3).map((post) => (
+            <li>
+              <p class="mb-0">
+                <a href={post.url}>{post.frontmatter.title}</a>
+              </p>
+              <p class="text-zinc-400">{post.frontmatter.description}</p>
+            </li>
+          ))
+        }
+        <li>
+          <p class="mb-0">
+            <a href="/blog">All blogs</a>
+          </p>
+          <p>
+            <a href="/rss.xml">RSS feed</a>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
 </Shell>

@@ -1,5 +1,4 @@
 - make title tag match page title
-- design inline code tags
 - implement tags on blog posts
 - investigate vercel edge functions for spotify backend
 - design "feed" aggregation of my activity
