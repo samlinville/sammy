@@ -11,8 +11,7 @@ module.exports = {
         "Lucida Grande",
       ],
       mono: [
-        "SFMono-Regular",
-        "SF Mono",
+        "JetBrains Mono",
         "ui-monospace",
         "DejaVu Sans Mono",
         "Menlo",

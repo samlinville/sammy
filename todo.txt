@@ -1,5 +1,5 @@
-- optimize mobile layout on blog index
 - make title tag match page title
+- design inline code tags
 - implement tags on blog posts
 - investigate vercel edge functions for spotify backend
 - design "feed" aggregation of my activity
@@ -7,5 +7,5 @@
 - music widget
     - refresh logic
     - explore text truncation / fixed width
-    - "fade in" when loaded rather than loading state/appearing
+    - animate in when loaded rather than loading state/flashing in
     - mobile view
