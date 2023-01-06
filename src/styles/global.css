@@ -154,7 +154,7 @@ p code {
   font-feature-settings: "liga" on, "calt" on;
   font-variant-ligatures: contextual;
   @apply after:hidden before:hidden;
-  @apply bg-[#0d1117] text-[#D2A8FF] border border-zinc-700 px-0.5 py-1 rounded-md;
+  @apply bg-[#0d1117] text-[#D2A8FF] font-normal border border-zinc-700 px-0.5 py-1 rounded-md;
 }
 
 h1,

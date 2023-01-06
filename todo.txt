@@ -1,5 +1,5 @@
-- make title tag match page title
 - implement tags on blog posts
+- separate blog subtitles from blog descriptions
 - investigate vercel edge functions for spotify backend
 - design "feed" aggregation of my activity
     - Sources: Mastodon toots + likes, Blog posts, Tweets + likes
