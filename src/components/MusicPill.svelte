@@ -6,14 +6,33 @@
   let song = null;
   let artist = null;
   let songPlaying = false;
+  let pageVisible = true;
 
   //fetch the initial song status
   getSong();
 
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") {
+      // console.log("page is hidden");
+      pageVisible = false;
+    } else if (document.visibilityState === "visible" && !pageVisible) {
+      // console.log("page is visible again");
+      pageVisible = true;
+
+      // console.log("refreshed because you switched back to the tab");
+      getSong();
+    }
+  });
+
   //refresh the song status every 20 seconds
   setInterval(() => {
-    getSong();
-  }, 20000);
+    if (pageVisible) {
+      // console.log("refreshed on timer b/c page visible");
+      getSong();
+    } else {
+      // console.log("skipped reload bc tab unfocused");
+    }
+  }, 60000);
 
   function getSong() {
     getCurrentSong().then((data) => {
