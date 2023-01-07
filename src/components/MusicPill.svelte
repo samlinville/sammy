@@ -67,7 +67,7 @@
       <img
         src={artwork}
         alt="Album art for the song {song} by {artist}"
-        class="z-10 absolute top-0 left-0 ml-[16px] h-[35px] rounded-sm drop-shadow-[-5px_0_5px_rgba(0,0,0,0.75)]"
+        class="z-10 absolute top-0 left-0 ml-[16px] h-[35px] rounded-sm drop-shadow-[-5px_0_5px_rgba(0,0,0,0.6)]"
       />
       <img
         alt="An 8-bit pixel art of a compact disc rotating"
@@ -77,12 +77,12 @@
     </div>
     <div class="ml-8">
       <p
-        class="font-mono musictitle text-xs text-zinc-200 transition-all duration-300 leading-0 mb-0"
+        class="max-w-[200px] text-ellipsis whitespace-nowrap overflow-hidden font-mono musictitle text-xs text-zinc-200 transition-all duration-300 leading-0 mb-0"
       >
         {song}
       </p>
       <p
-        class="font-mono musicartist text-xs text-zinc-400 transition-all duration-300 leading-0 mb-0"
+        class="max-w-[200px] text-ellipsis whitespace-nowrap overflow-hidden font-mono musicartist text-xs text-zinc-400 transition-all duration-300 leading-0 mb-0"
       >
         {artist}
       </p>
