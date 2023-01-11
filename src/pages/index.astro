@@ -16,7 +16,7 @@ const description = SITE_DESCRIPTION;
 
 <Shell title={title} description={description}>
   <p>
-    <span class="font-mono">Design + code.</span> On a journey to build good things.
+    <span class="font-mono italic intro">Design + code.</span> On a journey to build good things.
     Interested in cloud infrastructure, security, and developer experience. Product
     Manager for <a
       rel="noreferrer noopener"
@@ -55,3 +55,10 @@ const description = SITE_DESCRIPTION;
     </div>
   </div>
 </Shell>
+
+<style>
+.intro {
+  font-feature-settings: "liga" on, "calt" on, "ss01" on;
+  font-variant-ligatures: contextual;
+}
+</style>

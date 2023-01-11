@@ -95,6 +95,16 @@
     @apply text-zinc-200;
   }
 
+  .musictitle {
+    font-weight: 300;
+  }
+  .musicartist {
+    font-style: italic;
+    font-weight: 300;
+    font-feature-settings: "liga" on, "calt" on, "ss01" on;
+    font-variant-ligatures: contextual;
+  }
+
   .musicpill:hover .musicartist {
     @apply text-zinc-400;
   }

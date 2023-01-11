@@ -1,7 +1,7 @@
 ---
 layout: "../../layouts/BlogPost.astro"
 title: "Display your currently playing Spotify track on an Astro.build site"
-description: "Taking Astro Islands for a test drive"
+description: "Taking Astro Islands + Svelte for a test drive"
 pubDate: "Jan 6, 2023"
 heroImage: "/placeholder-hero.jpg"
 ---

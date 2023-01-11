@@ -11,7 +11,7 @@ module.exports = {
         "Lucida Grande",
       ],
       mono: [
-        "Fira Code",
+        "CascadiaCodeRoman-SemiLight",
         "ui-monospace",
         "DejaVu Sans Mono",
         "Menlo",
