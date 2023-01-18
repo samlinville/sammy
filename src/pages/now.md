@@ -10,6 +10,6 @@ heroImage: "/placeholder-hero.jpg"
 - Building a Mastodon client to stretch my front end development skills.
 - Tuning up a 3D printer that my brother and I designed and built.
 - Trying to make the upcoming year one of routine and habit building. I function much better with established schedules and routines, but I am paradoxically bad at keeping them. I’m trying to approach it with a gentler mindset this time.
-- Reading [The Soul of a New Machine](https://www.tracykidder.com/the-soul-of-a-new-machine.html) by Tracy Kidder.
+- Reading [Dune: Messiah](https://bookshop.org/p/books/dune-messiah-frank-herbert/7513771?ean=9780593098233) by Frank Herbert.
 
 This page is part of the [Now Page project](https://nownownow.com/) by [Derek Sivers](https://sive.rs/).
