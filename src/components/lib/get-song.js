@@ -1,5 +1,5 @@
 async function getCurrentSong() {
-  const res = await fetch(`https://sammy-service.fly.dev/spotify/current`);
+  const res = await fetch(`https://sammy-services.phoenix-cobra.ts.net/spotify/current`);
   const msg = await res.json();
   const data = msg.message;
   if (res.ok) {
