@@ -3,7 +3,6 @@ async function getCurrentSong() {
     method: 'GET',
     withCredentials: true,
     crossorigin: true,
-    mode: 'no-cors'
   });
   const msg = await res.json();
   const data = msg.message;
