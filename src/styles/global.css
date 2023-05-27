@@ -82,7 +82,7 @@ body {
 
 article,
 .content-prose {
-  @apply prose prose-zinc dark:prose-invert;
+  @apply prose dark:prose-invert;
 }
 
 pre {
