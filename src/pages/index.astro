@@ -1,64 +1,81 @@
 ---
-import Shell from "../components/Shell.astro";
-import SocialColumn from "../components/SocialColumn.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../config";
-
-// Use Astro.glob() to fetch all posts, and then sort them by date.
-const posts = (await Astro.glob("./blog/*.{md,mdx}")).sort(
-  (a, b) =>
-    new Date(b.frontmatter.pubDate).valueOf() -
-    new Date(a.frontmatter.pubDate).valueOf()
-);
-
-const title = SITE_TITLE;
-const description = SITE_DESCRIPTION;
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
 ---
 
-<Shell title={title} description={description}>
-  <p>
-    <span class="font-mono italic intro">Design + code.</span> On a journey to build good things.
-    Interested in cloud infrastructure, security, and developer experience. Product
-    Manager for <a
-      rel="noreferrer noopener"
-      href="https://tailscale.com"
-      target="_blank">Tailscale</a
-    >.
-  </p>
-
-  <div class="mt-16 grid grid-cols-4 gap-16">
-    <div class="col-span-4 sm:col-span-1 order-last sm:order-first">
-      <SocialColumn />
-    </div>
-
-    <div class="col-span-4 sm:col-span-3">
-      <h2 class="text-sm text-zinc-400 mb-4">Recent blogs</h2>
-      <ul>
-        {
-          posts.slice(0, 3).map((post) => (
-            <li>
-              <p class="mb-0">
-                <a href={post.url}>{post.frontmatter.title}</a>
-              </p>
-              <p class="text-zinc-400">{post.frontmatter.description}</p>
-            </li>
-          ))
-        }
-        <li>
-          <p class="mb-0">
-            <a href="/blog">All blogs</a>
-          </p>
-          <p>
-            <a href="/rss.xml">RSS feed</a>
-          </p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</Shell>
+<Layout title="Welcome to Astro.">
+	<main>
+		<h1>Welcome to <span class="text-gradient">Astro</span></h1>
+		<p class="instructions">
+			To get started, open the directory <code>src/pages</code> in your project.<br />
+			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
+		</p>
+		<ul role="list" class="link-card-grid">
+			<Card
+				href="https://docs.astro.build/"
+				title="Documentation"
+				body="Learn how Astro works and explore the official API docs."
+			/>
+			<Card
+				href="https://astro.build/integrations/"
+				title="Integrations"
+				body="Supercharge your project with new frameworks and libraries."
+			/>
+			<Card
+				href="https://astro.build/themes/"
+				title="Themes"
+				body="Explore a galaxy of community-built starter themes."
+			/>
+			<Card
+				href="https://astro.build/chat/"
+				title="Community"
+				body="Come say hi to our amazing Discord community. ❤️"
+			/>
+		</ul>
+	</main>
+</Layout>
 
 <style>
-.intro {
-  font-feature-settings: "liga" on, "calt" on, "ss01" on;
-  font-variant-ligatures: contextual;
-}
+	main {
+		margin: auto;
+		padding: 1.5rem;
+		max-width: 60ch;
+	}
+	h1 {
+		font-size: 3rem;
+		font-weight: 800;
+		margin: 0;
+	}
+	.text-gradient {
+		background-image: var(--accent-gradient);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 400%;
+		background-position: 0%;
+	}
+	.instructions {
+		line-height: 1.6;
+		margin: 1rem 0;
+		border: 1px solid rgba(var(--accent), 25%);
+		background-color: white;
+		padding: 1rem;
+		border-radius: 0.4rem;
+	}
+	.instructions code {
+		font-size: 0.875em;
+		font-weight: bold;
+		background: rgba(var(--accent), 12%);
+		color: rgb(var(--accent));
+		border-radius: 4px;
+		padding: 0.3em 0.45em;
+	}
+	.instructions strong {
+		color: rgb(var(--accent));
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
+		gap: 1rem;
+		padding: 0;
+	}
 </style>
